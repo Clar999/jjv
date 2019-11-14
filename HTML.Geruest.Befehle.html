@@ -34,7 +34,11 @@
             </section>
             <section class="textfeld">
                 <h2>git remote add</h2>
-                <p></p>
+                <p>Mit dem Befehl $git remote add wird ein lokales Repository z.B. einem externen Repository hinzugefügt.
+                    Hierzu werden folgende Dinge benötigt:
+                    Ein Remote Name, z.B. von der Herkunft
+                    Eine entfernte URL, z.B. https://github.com/Superscoti/Github_Projekt.git
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git commit</h2>
@@ -50,7 +54,20 @@
             </section>
             <section class="textfeld">
                 <h2>git merge</h2>
-                <p></p>
+                <p>Mit $git merge kann man einzelne Änderungen von einem Branch einem anderen Branch zuweisen. 
+                    Allerdings können hierbei viele Fehler entstehen. Diese werden als unmerged angezeigt, wenn man $git status in der Konsole abfragt. $git status kann auch aufzeigen, um welche Art von Fehler es sich handelt. Um den Merge abzuschließen, müssen die Konflikte behoben, die Marker entfernt, die Dateien dem Index hinzugefügt und die Änderungen committet werden. 
+                    Beispiele für Fehler sind:
+                    error: Entry '<fileName>' not uptodate. Cannot merge. (Changes in working directory)
+                    error: Entry '<fileName>' would be overwritten by merge. Cannot merge. (Changes in staging area)
+                    https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts
+                    Git merge Optionen sind:
+                    --no-ff 
+                    Hier wird ein merge Commit erstellt, obwohl ein schneller Vorlauf ebenso möglich wäre
+                    --squash 
+                    Hier werden alle integrierten Änderungen zusammengefügt. Sozusagen als Paket erhalten, anstatt als einzelne Pakete
+                    --abort
+                    Hier wird bei einem Konflikt das Zusammenführen abgebrochen und der Vorzustand wiederhergestellt.
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git rebase</h2>
