@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>GIT Befehle</title>
+        <link rel="" type="" href="#">
+    </head>
+    <body>
+        <header>
+            <img src="#">
+        </header>
+        <nav>
+             <ul>
+                <li><a href="#">Startseite</a></li>
+                <li><a href="#">Git-Befehle</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+             </ul>
+        </nav>
+        <section>
+            <h1>Git-Befehle</h1>
+            <section class="textfeld">
+                <h2>git config</h2>
+                <p>
+                    Mit dem git config Befehl werden Werte für die Konfiguration gesetzt, in dem im .gitconfig Ordner die Konfigurations-Textdateien angepasst werden.
+                    Die Konfigurationsnamen sind bestehen aus der "section" und dem "key" und sind durch einen Punkt voneinandergetrennt: </br>
+                    user.email</br>
+                    user.name</br>
+                    Zusätzlich können noch Argumente mitgegeben werden.</br>
+                    --local (die Werte werden in einer Datei im Repository abgelegt)</br>
+                    --global (die Werte beziehen sich auf den Benutzer des Betriebssystems)</br>
+                    --system (die Werte werden auf den kompletten Rechner angewendet > alle Benutzer des Betriebssystems und alle Repositories)</br>
+                    Priotität: local > global > system (git sucht erst lokal nach config-Werten und erst zum Schluss auf System-Ebene) </br>
+                    Auf dem Bild ist eine config-Datei zu sehen, die in einem Benutzer-Ordner liegt und deren Parameter zeigt.
+                </p>
+                <img src="gitConfigFile.png" title=".gitconfig Datei" alt=".gitconfig Datei zeigt Parameter des Befehls"/>
+            </section>
+            <section class="textfeld">
+                <h2>git init</h2>
+                <p>
+                    Mit git init wird ein neues Repository erstellt. Der Befehl kann dazu verwendet werden, ein existierendes Projekt in ein Repository zu wandeln, oder ein neues, 
+                    leeres Repository anzulegen. Da die meisten anderen Git-Befehle nicht zugänglich sind, solange das Repository nicht initialisiert wurde, ist es meist der erste Command.
+                    Im Hintergrund wird ein .git-Ordner erstellt, dass alle nötigen Metadaten enthält und eine HEAD-Datei wird angelegt, die auf den aktuellen Commit hinweist.  </br>
+                    Auf dem Bild ist ein .git-Ordner abgebildet, der nach dem git init-Befehl erstellt wird.
+                </p>
+                <img src="gitInitFolder.png" title=".git Ordner" alt=".git Ordner mit Dateien im Repository"/>
+            </section>
+            <section class="textfeld">
+                <h2>git add</h2>
+                <p></p>
+            </section>
+            <section class="textfeld">
+                <h2>git remote add</h2>
+                <p></p>
+            </section>
+            <section class="textfeld">
+                <h2>git commit</h2>
+                <p></p>
+            </section>
+            <section class="textfeld">
+                <h2>git branch</h2>
+                <p>
+                    Branches sind eine Art Verzeigung und werden auch Versionszweige genannt. Sie werden benutzt damit mehrere Personen gleichzeitig an einem Projekt arbeiten können. Dadrch können zwei verschiedene Probleme, Funktionen oder sonstige Inhalte in einem Projekt parallel gefixt oder bearbeitet werden.
+                    Beim Erstellen eines neuen Repositories entsteht als Standard der „master“ Branch. Mit dem Befehl „git branch [branchname]“ kann ein neuer Branch erstellt werden. Wenn die Arbeit auf einem Branch erledigt wurde, kann dieser durch mergen wieder mit dem „master“ zusammengeführt werden.
+                    Anschließend kann der Branch mit dem Befehl „git branch –d [branchname]“ wieder gelöscht werden.
+                    Mit dem Befehl „git branch –a“ können alle Branches aufgelistet werden. Wenn nur die lokalen Branches aufgelistet werden sollen, kann da „-a“ weggelassen werden.
+                </p>
+                <img src=Z:\documents\GitHub\gitWebsite alt=Masterbranch mit zwei weiteren Branches/>
+            </section>
+            <section class="textfeld"> 
+                <h2>git checkout</h2>
+                <p>
+                    Durch den Befehl „git checkout [branchname]“ kann zwischen den einzelnen Verzweigungen hin und her gewechselt werden. So kann der Branch angesprochen werden, auf dem man selbst arbeitet. Git ändert hier bei einem checkout die Quelldatei. Das Ganze funktioniert im Normalfall aber nur, wenn der Branch bereits commited wurde oder nichts darin verändert wurde.
+                    Für das Erstellen eines Branches und das Auschecken dieses gibt es folgenden Befehl, der beides auf einmal macht: „git checkout –b [branchname]“. 
+                </p>
+            </section>
+            <section class="textfeld">
+                <h2>git merge</h2>
+                <p></p>
+            </section>
+            <section class="textfeld">
+                <h2>git rebase</h2>
+                <p></p>
+            </section>
+            <section class="textfeld">
+                <h2>git fetch</h2>
+                <p></p>
+            </section>
+            <section class="textfeld">
+                <h2>git push</h2>
+                <p>Dieser Befehl wird benötigt, um Änderungen im lokalen Repository an ein entferntes Repository zu übermitteln. Dabei werden die Daten an einen Host übertragen (z.B. GitHub) und andere können diese nun klonen. Bei manueller Eingabe folgen nach git push noch die Parameter „remote_name“ und „branch_name“.</p>
+            </section>
+            <section class="textfeld">
+                <h2>git pull</h2>
+                <p>Wenn du die aktuellsten Änderungen empfangen möchtest und direkt in deine lokale Kopie speichern willst, nutze diesen Befehl. Er bildet sozusagen eine Mischung aus den Befehlen git fetch und git merge. Solltest du keinen merge wollen, kannst du auch git pull --rebase eingeben. Für genauere Informationen, was gedownloadet und gemerged wird, verwende git pull --verbose. Anschließend kannst du mit den neusten Dateiversionen arbeiten. </p>
+            </section>
+            <section class="textfeld">
+                <h2>git clone</h2>
+                <p></p>
+            </section>
+            <section class="textfeld">
+                <h2>git status</h2>
+                <p></p>
+            </section>
+        </section>
+        <footer>
+            <a href="#" >Impressum</a>/a> <!--alles fürs Impressum, Link-->
+            <a href="#" >Abbildungsverzeichnis</a> <!--alles fürs Abbildungsverzeichnis, Link-->
+        </footer>
+    </body>
+</html>
