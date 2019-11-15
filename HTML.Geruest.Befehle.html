@@ -7,7 +7,7 @@
     </head>
     <body>
         <header>
-            <img src="#">
+            <img src="C:\Users\MSL\Documents\GitHub\gitWebsite" Alt="FANCY Logo">
         </header>
         <nav>
              <ul>
@@ -22,29 +22,11 @@
             <h1>Git-Befehle</h1>
             <section class="textfeld">
                 <h2>git config</h2>
-                <p>
-                    Mit dem git config Befehl werden Werte für die Konfiguration gesetzt, in dem im .gitconfig Ordner die Konfigurations-Textdateien angepasst werden.
-                    Die Konfigurationsnamen sind bestehen aus der "section" und dem "key" und sind durch einen Punkt voneinandergetrennt: </br>
-                    user.email</br>
-                    user.name</br>
-                    Zusätzlich können noch Argumente mitgegeben werden.</br>
-                    --local (die Werte werden in einer Datei im Repository abgelegt)</br>
-                    --global (die Werte beziehen sich auf den Benutzer des Betriebssystems)</br>
-                    --system (die Werte werden auf den kompletten Rechner angewendet > alle Benutzer des Betriebssystems und alle Repositories)</br>
-                    Priotität: local > global > system (git sucht erst lokal nach config-Werten und erst zum Schluss auf System-Ebene) </br>
-                    Auf dem Bild ist eine config-Datei zu sehen, die in einem Benutzer-Ordner liegt und deren Parameter zeigt.
-                </p>
-                <img src="gitConfigFile.png" title=".gitconfig Datei" alt=".gitconfig Datei zeigt Parameter des Befehls"/>
+                <p></p>
             </section>
             <section class="textfeld">
                 <h2>git init</h2>
-                <p>
-                    Mit git init wird ein neues Repository erstellt. Der Befehl kann dazu verwendet werden, ein existierendes Projekt in ein Repository zu wandeln, oder ein neues, 
-                    leeres Repository anzulegen. Da die meisten anderen Git-Befehle nicht zugänglich sind, solange das Repository nicht initialisiert wurde, ist es meist der erste Command.
-                    Im Hintergrund wird ein .git-Ordner erstellt, dass alle nötigen Metadaten enthält und eine HEAD-Datei wird angelegt, die auf den aktuellen Commit hinweist.  </br>
-                    Auf dem Bild ist ein .git-Ordner abgebildet, der nach dem git init-Befehl erstellt wird.
-                </p>
-                <img src="gitInitFolder.png" title=".git Ordner" alt=".git Ordner mit Dateien im Repository"/>
+                <p></p>
             </section>
             <section class="textfeld">
                 <h2>git add</h2>
@@ -52,7 +34,11 @@
             </section>
             <section class="textfeld">
                 <h2>git remote add</h2>
-                <p></p>
+                <p>Mit dem Befehl $git remote add wird ein lokales Repository z.B. einem externen Repository hinzugefügt.
+                    Hierzu werden folgende Dinge benötigt:
+                    Ein Remote Name, z.B. von der Herkunft
+                    Eine entfernte URL, z.B. https://github.com/Superscoti/Github_Projekt.git
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git commit</h2>
@@ -77,15 +63,32 @@
             </section>
             <section class="textfeld">
                 <h2>git merge</h2>
-                <p></p>
+                <p>Mit $git merge kann man einzelne Änderungen von einem Branch einem anderen Branch zuweisen. 
+                    Allerdings können hierbei viele Fehler entstehen. Diese werden als unmerged angezeigt, wenn man $git status in der Konsole abfragt. $git status kann auch aufzeigen, um welche Art von Fehler es sich handelt. Um den Merge abzuschließen, müssen die Konflikte behoben, die Marker entfernt, die Dateien dem Index hinzugefügt und die Änderungen committet werden. 
+                    Beispiele für Fehler sind:
+                    error: Entry '<fileName>' not uptodate. Cannot merge. (Changes in working directory)
+                    error: Entry '<fileName>' would be overwritten by merge. Cannot merge. (Changes in staging area)
+                    https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts
+                    Git merge Optionen sind:
+                    --no-ff 
+                    Hier wird ein merge Commit erstellt, obwohl ein schneller Vorlauf ebenso möglich wäre
+                    --squash 
+                    Hier werden alle integrierten Änderungen zusammengefügt. Sozusagen als Paket erhalten, anstatt als einzelne Pakete
+                    --abort
+                    Hier wird bei einem Konflikt das Zusammenführen abgebrochen und der Vorzustand wiederhergestellt.
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git rebase</h2>
-                <p></p>
+                <p>
+                    Mit dem Befehl $git Rebase kann man alle Änderungen, die an einem Branch gemacht wurden, auf einen anderen Branch erneut anwenden. Git geht hierbei auf den letzten gemeinsamen Vorfahren der beiden Branches (den auf dem man arbeitet und den auf den man Rebasen möchte). Dann werden Informationen zu den Änderungen gesammelt, die bei jedem Commit des aktuellen Branches gemacht wurden. Diese Änderungen werden in temporäre Dateien gespeichert und der aktuelle Branch wird auf den gleichen Commit gesetzt, wie der Branch den man Rebasen möchtet. Dann werden alle Änderungen erneut durchgeführt. 
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git fetch</h2>
-                <p></p>
+                <p>
+                    Der Befehl $git fetch importiert Commits von einem Remote-Repository in das lokale Repository. Diese Commits werden als Remote-Branches und nicht als normale, lokale Branches gespeichert. Das bietet Entwicklern die Möglichkeit, Änderungen zu reviewen, ehe sie diese in die eigenen Kopien des Projekts integrieren.
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git push</h2>
