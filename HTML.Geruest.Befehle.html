@@ -30,11 +30,17 @@
             </section>
             <section class="textfeld">
                 <h2>git add</h2>
-                <p></p>
+                <p>
+                    Mit dem Befehl git add kann ein Repository (also ein Verzeichnis) unter die Verwaltung durch Git gestellt werden. Nur die Dateien, die mit Git add zur Verwaltung hinzugefügt wurden werden beim nächsten Commit gespeichert.
+                    Wichtig ist, dass später beim commit der Stand gespeichert wird, den die Datei beim Eingeben des Befehls git add hatte. 
+                    Also sollte git commit immer unmittelbar nach git add verwendet werden.
+
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git remote add</h2>
-                <p>Mit dem Befehl $git remote add wird ein lokales Repository z.B. einem externen Repository hinzugefügt.
+                <p>
+                    Mit dem Befehl $git remote add wird ein lokales Repository z.B. einem externen Repository hinzugefügt.
                     Hierzu werden folgende Dinge benötigt:
                     Ein Remote Name, z.B. von der Herkunft
                     Eine entfernte URL, z.B. https://github.com/Superscoti/Github_Projekt.git
@@ -42,7 +48,17 @@
             </section>
             <section class="textfeld">
                 <h2>git commit</h2>
-                <p></p>
+                <p>
+                    Unter einem Commit versteht man einen Schnappschuss des aktuellen Stand aller Dateien. 
+                    Wurde eine Datei im Repository nicht geändert, wird für diese kein Schnappschuss erstellt. 
+                    Stattdessen wird der vorherige Schnappschuss weiterhin verwendet. Die einzelnen Commits können später wieder aufgerufen werden.
+                    Bei jedem Commit kann ein kurzer Kommentar hinzugefügt werden. 
+                    Dieser Kommentar dient zur Übersicht und hilft Änderungen nachzuverfolgen und wiederzufinden.
+                    Ein commit kann über das Terminal durch den Befehl $git add (Dateiname) und $git commit "Short Message" erstellt werden.
+                    In der GitHub Desktop Applikation kann ein Commit unter dem Reiter Changes durch den Click auf den Button Commit to master ausgeführt werden.
+                    Optional kann ein Commit auch in dem Programm in dem die Änderungen durchgeführt wurden gemacht werden. Voraisgesetzt das Programm unterstützt git (z.B IntelliJ, Visual Studio Code,...).
+                        
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git branch</h2>
@@ -63,7 +79,8 @@
             </section>
             <section class="textfeld">
                 <h2>git merge</h2>
-                <p>Mit $git merge kann man einzelne Änderungen von einem Branch einem anderen Branch zuweisen. 
+                <p>
+                    Mit $git merge kann man einzelne Änderungen von einem Branch einem anderen Branch zuweisen. 
                     Allerdings können hierbei viele Fehler entstehen. Diese werden als unmerged angezeigt, wenn man $git status in der Konsole abfragt. $git status kann auch aufzeigen, um welche Art von Fehler es sich handelt. Um den Merge abzuschließen, müssen die Konflikte behoben, die Marker entfernt, die Dateien dem Index hinzugefügt und die Änderungen committet werden. 
                     Beispiele für Fehler sind:
                     error: Entry '<fileName>' not uptodate. Cannot merge. (Changes in working directory)
@@ -81,22 +98,33 @@
             <section class="textfeld">
                 <h2>git rebase</h2>
                 <p>
-                    Mit dem Befehl $git Rebase kann man alle Änderungen, die an einem Branch gemacht wurden, auf einen anderen Branch erneut anwenden. Git geht hierbei auf den letzten gemeinsamen Vorfahren der beiden Branches (den auf dem man arbeitet und den auf den man Rebasen möchte). Dann werden Informationen zu den Änderungen gesammelt, die bei jedem Commit des aktuellen Branches gemacht wurden. Diese Änderungen werden in temporäre Dateien gespeichert und der aktuelle Branch wird auf den gleichen Commit gesetzt, wie der Branch den man Rebasen möchtet. Dann werden alle Änderungen erneut durchgeführt. 
+                    Mit dem Befehl git Rebase kann man alle Änderungen, die an einem Branch gemacht wurden, auf einen anderen Branch erneut anwenden. Git geht hierbei auf den letzten gemeinsamen Vorfahren der beiden Branches (den auf dem man arbeitet und den auf den man Rebasen möchte). Dann werden Informationen zu den Änderungen gesammelt, die bei jedem Commit des aktuellen Branches gemacht wurden. Diese Änderungen werden in temporäre Dateien gespeichert und der aktuelle Branch wird auf den gleichen Commit gesetzt, wie der Branch den man Rebasen möchtet. Dann werden alle Änderungen erneut durchgeführt. 
+
                 </p>
             </section>
             <section class="textfeld">
                 <h2>git fetch</h2>
                 <p>
-                    Der Befehl $git fetch importiert Commits von einem Remote-Repository in das lokale Repository. Diese Commits werden als Remote-Branches und nicht als normale, lokale Branches gespeichert. Das bietet Entwicklern die Möglichkeit, Änderungen zu reviewen, ehe sie diese in die eigenen Kopien des Projekts integrieren.
+                    Der Befehl git fetch importiert Commits von einem Remote-Repository in das lokale Reposirory. Diese Commits werden als Remote-Branches und nicht als normale, lokale Branches gespeichert. Das bietet Entwicklern die Möglichkeit, Änderungen zu reviewen, ehe sie diese in die eigenen Kopien des Projekts integrieren.
+
                 </p>
             </section>
             <section class="textfeld">
                 <h2>git push</h2>
-                <p>Dieser Befehl wird benötigt, um Änderungen im lokalen Repository an ein entferntes Repository zu übermitteln. Dabei werden die Daten an einen Host übertragen (z.B. GitHub) und andere können diese nun klonen. Bei manueller Eingabe folgen nach git push noch die Parameter „remote_name“ und „branch_name“.</p>
+                <p>
+                    Dieser Befehl wird benötigt, um Änderungen im lokalen Repository an ein entferntes Repository zu übermitteln. 
+                    Dabei werden die Daten an einen Host übertragen (z.B. GitHub) und andere können diese nun klonen. Bei manueller Eingabe folgen nach git push noch die Parameter „remote_name“ und „branch_name“.
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git pull</h2>
-                <p>Wenn du die aktuellsten Änderungen empfangen möchtest und direkt in deine lokale Kopie speichern willst, nutze diesen Befehl. Er bildet sozusagen eine Mischung aus den Befehlen git fetch und git merge. Solltest du keinen merge wollen, kannst du auch git pull --rebase eingeben. Für genauere Informationen, was gedownloadet und gemerged wird, verwende git pull --verbose. Anschließend kannst du mit den neusten Dateiversionen arbeiten. </p>
+                <p>
+                    Wenn du die aktuellsten Änderungen empfangen möchtest und direkt in deine lokale Kopie speichern willst, nutze diesen Befehl. 
+                    Er bildet sozusagen eine Mischung aus den Befehlen git fetch und git merge. 
+                    Solltest du keinen merge wollen, kannst du auch git pull --rebase eingeben. 
+                    Für genauere Informationen, was gedownloadet und gemerged wird, verwende git pull --verbose. 
+                    Anschließend kannst du mit den neusten Dateiversionen arbeiten.
+                </p>
             </section>
             <section class="textfeld">
                 <h2>git clone</h2>
