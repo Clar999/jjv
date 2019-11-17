@@ -2,23 +2,23 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>GIT Befehle</title>
-        <link rel="" type="" href="#">
+        <title></title>
+        <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
         <header>
-            <img src="C:\Users\MSL\Documents\GitHub\gitWebsite" Alt="FANCY Logo">
+            <section class="wrapper">
+                <img src="Logo.png" alt="" class="logo" /> <!---Logo einfügen-->
+                <nav>
+                    <ul>
+                        <li><a href="#">Startseite</a></li>
+                        <li><a href="#">Git-Befehle</a></li>
+                    </ul>
+                </nav>
+            </section>
         </header>
-        <nav>
-             <ul>
-                <li><a href="#">Startseite</a></li>
-                <li><a href="#">Git-Befehle</a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-             </ul>
-        </nav>
-        <section>
+
+        <section id="contentbereich" class="wrapper">
             <h1>Git-Befehle</h1>
             <section class="textfeld">
                 <h2>git config</h2>
@@ -31,18 +31,17 @@
             <section class="textfeld">
                 <h2>git add</h2>
                 <p>
-                    Mit dem Befehl git add kann ein Repository (also ein Verzeichnis) unter die Verwaltung durch Git gestellt werden. Nur die Dateien, die mit Git add zur Verwaltung hinzugefügt wurden werden beim nächsten Commit gespeichert.
+                    Mit dem Befehl <b>git add</b> kann ein Repository (also ein Verzeichnis) unter die Verwaltung durch Git gestellt werden. Nur die Dateien, die mit Git add zur Verwaltung hinzugefügt wurden werden beim nächsten Commit gespeichert.
                     Wichtig ist, dass später beim commit der Stand gespeichert wird, den die Datei beim Eingeben des Befehls git add hatte. 
                     Also sollte git commit immer unmittelbar nach git add verwendet werden.
-
                 </p>
             </section>
             <section class="textfeld">
                 <h2>git remote add</h2>
                 <p>
-                    Mit dem Befehl $git remote add wird ein lokales Repository z.B. einem externen Repository hinzugefügt.
-                    Hierzu werden folgende Dinge benötigt:
-                    Ein Remote Name, z.B. von der Herkunft
+                    Mit dem Befehl <b>$git remote add</b> wird ein lokales Repository z.B. einem externen Repository hinzugefügt. </br>
+                    <b>Hierzu werden folgende Dinge benötigt:</b></br>
+                    Ein Remote Name, z.B. von der Herkunft </br>
                     Eine entfernte URL, z.B. https://github.com/Superscoti/Github_Projekt.git
                 </p>
             </section>
@@ -51,12 +50,14 @@
                 <p>
                     Unter einem Commit versteht man einen Schnappschuss des aktuellen Stand aller Dateien. 
                     Wurde eine Datei im Repository nicht geändert, wird für diese kein Schnappschuss erstellt. 
-                    Stattdessen wird der vorherige Schnappschuss weiterhin verwendet. Die einzelnen Commits können später wieder aufgerufen werden.
+                    Stattdessen wird der vorherige Schnappschuss weiterhin verwendet. Die einzelnen Commits können später wieder aufgerufen werden. </br>
+                    </br>
                     Bei jedem Commit kann ein kurzer Kommentar hinzugefügt werden. 
                     Dieser Kommentar dient zur Übersicht und hilft Änderungen nachzuverfolgen und wiederzufinden.
-                    Ein commit kann über das Terminal durch den Befehl $git add (Dateiname) und $git commit "Short Message" erstellt werden.
-                    In der GitHub Desktop Applikation kann ein Commit unter dem Reiter Changes durch den Click auf den Button Commit to master ausgeführt werden.
-                    Optional kann ein Commit auch in dem Programm in dem die Änderungen durchgeführt wurden gemacht werden. Voraisgesetzt das Programm unterstützt git (z.B IntelliJ, Visual Studio Code,...).
+                    Ein commit kann über das Terminal durch den Befehl $git add (Dateiname) und <b> $git commit "Short Message" </b>erstellt werden.
+                    In der GitHub Desktop Applikation kann ein Commit unter dem Reiter Changes durch den Click auf den Button Commit to master ausgeführt werden. </br>
+                    </br>
+                    Optional kann ein Commit auch in dem Programm in dem die Änderungen durchgeführt wurden gemacht werden. Vorausgesetzt das Programm unterstützt git (z.B IntelliJ, Visual Studio Code,...).
                         
                 </p>
             </section>
@@ -64,47 +65,53 @@
                 <h2>git branch</h2>
                 <p>
                     Branches sind eine Art Verzeigung und werden auch Versionszweige genannt. Sie werden benutzt damit mehrere Personen gleichzeitig an einem Projekt arbeiten können. Dadrch können zwei verschiedene Probleme, Funktionen oder sonstige Inhalte in einem Projekt parallel gefixt oder bearbeitet werden.
-                    Beim Erstellen eines neuen Repositories entsteht als Standard der „master“ Branch. Mit dem Befehl „git branch [branchname]“ kann ein neuer Branch erstellt werden. Wenn die Arbeit auf einem Branch erledigt wurde, kann dieser durch mergen wieder mit dem „master“ zusammengeführt werden.
-                    Anschließend kann der Branch mit dem Befehl „git branch –d [branchname]“ wieder gelöscht werden.
-                    Mit dem Befehl „git branch –a“ können alle Branches aufgelistet werden. Wenn nur die lokalen Branches aufgelistet werden sollen, kann da „-a“ weggelassen werden.
+                    Beim Erstellen eines neuen Repositories entsteht als Standard der „master“ Branch. </br>
+                    </br>
+                    Mit dem Befehl <b>git branch [branchname]</b> kann ein neuer Branch erstellt werden. Wenn die Arbeit auf einem Branch erledigt wurde, kann dieser durch mergen wieder mit dem „master“ zusammengeführt werden.
+                    Anschließend kann der Branch mit dem Befehl <b>git branch –d [branchname]</b> wieder gelöscht werden. </br>
+                    </br>
+                    Mit dem Befehl <b>git branch –a</b> können alle Branches aufgelistet werden. Wenn nur die lokalen Branches aufgelistet werden sollen, kann da „-a“ weggelassen werden.
                 </p>
-                <img src=Z:\documents\GitHub\gitWebsite alt=Masterbranch mit zwei weiteren Branches/>
+                <img src="" alt="Masterbranch mit zwei weiteren Branches" />
             </section>
             <section class="textfeld"> 
                 <h2>git checkout</h2>
                 <p>
-                    Durch den Befehl „git checkout [branchname]“ kann zwischen den einzelnen Verzweigungen hin und her gewechselt werden. So kann der Branch angesprochen werden, auf dem man selbst arbeitet. Git ändert hier bei einem checkout die Quelldatei. Das Ganze funktioniert im Normalfall aber nur, wenn der Branch bereits commited wurde oder nichts darin verändert wurde.
-                    Für das Erstellen eines Branches und das Auschecken dieses gibt es folgenden Befehl, der beides auf einmal macht: „git checkout –b [branchname]“. 
+                    Durch den Befehl <b> git checkout [branchname]</b> kann zwischen den einzelnen Verzweigungen hin und her gewechselt werden. So kann der Branch angesprochen werden, auf dem man selbst arbeitet. Git ändert hier bei einem checkout die Quelldatei. Das Ganze funktioniert im Normalfall aber nur, wenn der Branch bereits commited wurde oder nichts darin verändert wurde.
+                    Für das Erstellen eines Branches und das Auschecken dieses gibt es folgenden Befehl, der beides auf einmal macht: <b> git checkout –b [branchname]</b>. 
                 </p>
             </section>
             <section class="textfeld">
                 <h2>git merge</h2>
                 <p>
-                    Mit $git merge kann man einzelne Änderungen von einem Branch einem anderen Branch zuweisen. 
-                    Allerdings können hierbei viele Fehler entstehen. Diese werden als unmerged angezeigt, wenn man $git status in der Konsole abfragt. $git status kann auch aufzeigen, um welche Art von Fehler es sich handelt. Um den Merge abzuschließen, müssen die Konflikte behoben, die Marker entfernt, die Dateien dem Index hinzugefügt und die Änderungen committet werden. 
-                    Beispiele für Fehler sind:
-                    error: Entry '<fileName>' not uptodate. Cannot merge. (Changes in working directory)
-                    error: Entry '<fileName>' would be overwritten by merge. Cannot merge. (Changes in staging area)
-                    https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts
-                    Git merge Optionen sind:
-                    --no-ff 
-                    Hier wird ein merge Commit erstellt, obwohl ein schneller Vorlauf ebenso möglich wäre
-                    --squash 
-                    Hier werden alle integrierten Änderungen zusammengefügt. Sozusagen als Paket erhalten, anstatt als einzelne Pakete
-                    --abort
-                    Hier wird bei einem Konflikt das Zusammenführen abgebrochen und der Vorzustand wiederhergestellt.
+                    Mit <b>$git merge</b> kann man einzelne Änderungen von einem Branch einem anderen Branch zuweisen. 
+                    Allerdings können hierbei viele Fehler entstehen. Diese werden als unmerged angezeigt, wenn man <b> $git status</b> in der Konsole abfragt. <b>$git status</b> kann auch aufzeigen, um welche Art von Fehler es sich handelt. Um den Merge abzuschließen, müssen die Konflikte behoben, die Marker entfernt, die Dateien dem Index hinzugefügt und die Änderungen committet werden.  </br>
+                    </br>
+                    Beispiele für Fehler sind: </br>
+                    error: Entry fileName not uptodate. Cannot merge. (Changes in working directory) </br>
+                    error: Entry fileName would be overwritten by merge. Cannot merge. (Changes in staging area) </br>
+                    https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts </br>
+                    </br>
+                    Git merge Optionen sind: </br>
+                
+                    <b>--no-ff </b>
+                    Hier wird ein merge Commit erstellt, obwohl ein schneller Vorlauf ebenso möglich wäre </br>
+                    <b>--squash </b>
+                    Hier werden alle integrierten Änderungen zusammengefügt. Sozusagen als Paket erhalten, anstatt als einzelne Pakete </br>
+                    <b>--abort</b>
+                    Hier wird bei einem Konflikt das Zusammenführen abgebrochen und der Vorzustand wiederhergestellt.</br>
                 </p>
             </section>
             <section class="textfeld">
                 <h2>git rebase</h2>
                 <p>
-                    Mit dem Befehl git Rebase kann man alle Änderungen, die an einem Branch gemacht wurden, auf einen anderen Branch erneut anwenden. Git geht hierbei auf den letzten gemeinsamen Vorfahren der beiden Branches (den auf dem man arbeitet und den auf den man Rebasen möchte). Dann werden Informationen zu den Änderungen gesammelt, die bei jedem Commit des aktuellen Branches gemacht wurden. Diese Änderungen werden in temporäre Dateien gespeichert und der aktuelle Branch wird auf den gleichen Commit gesetzt, wie der Branch den man Rebasen möchtet. Dann werden alle Änderungen erneut durchgeführt.
+                    Mit dem Befehl <b> git Rebase</b> kann man alle Änderungen, die an einem Branch gemacht wurden, auf einen anderen Branch erneut anwenden. Git geht hierbei auf den letzten gemeinsamen Vorfahren der beiden Branches (den auf dem man arbeitet und den auf den man Rebasen möchte). Dann werden Informationen zu den Änderungen gesammelt, die bei jedem Commit des aktuellen Branches gemacht wurden. Diese Änderungen werden in temporäre Dateien gespeichert und der aktuelle Branch wird auf den gleichen Commit gesetzt, wie der Branch den man Rebasen möchtet. Dann werden alle Änderungen erneut durchgeführt.
                 </p>
             </section>
             <section class="textfeld">
                 <h2>git fetch</h2>
                 <p>
-                    Der Befehl git fetch importiert Commits von einem Remote-Repository in das lokale Reposirory. Diese Commits werden als Remote-Branches und nicht als normale, lokale Branches gespeichert. Das bietet Entwicklern die Möglichkeit, Änderungen zu reviewen, ehe sie diese in die eigenen Kopien des Projekts integrieren.
+                    Der Befehl <b> git fetch</b> importiert Commits von einem Remote-Repository in das lokale Reposirory. Diese Commits werden als Remote-Branches und nicht als normale, lokale Branches gespeichert. Das bietet Entwicklern die Möglichkeit, Änderungen zu reviewen, ehe sie diese in die eigenen Kopien des Projekts integrieren.
                 </p>
             </section>
             <section class="textfeld">
@@ -118,9 +125,9 @@
                 <h2>git pull</h2>
                 <p>
                     Wenn du die aktuellsten Änderungen empfangen möchtest und direkt in deine lokale Kopie speichern willst, nutze diesen Befehl. 
-                    Er bildet sozusagen eine Mischung aus den Befehlen git fetch und git merge. 
-                    Solltest du keinen merge wollen, kannst du auch git pull --rebase eingeben. 
-                    Für genauere Informationen, was gedownloadet und gemerged wird, verwende git pull --verbose. 
+                    Er bildet sozusagen eine Mischung aus den Befehlen git fetch und git merge. </br>
+                    Solltest du keinen merge wollen, kannst du auch <b> git pull --rebase</b> eingeben. </br>
+                    Für genauere Informationen, was gedownloadet und gemerged wird, verwende <b> git pull --verbose</b>. </br>
                     Anschließend kannst du mit den neusten Dateiversionen arbeiten.
                 </p>
             </section>
@@ -134,8 +141,12 @@
             </section>
         </section>
         <footer>
-            <a href="#" >Impressum</a>/a> <!--alles fürs Impressum, Link-->
-            <a href="#" >Abbildungsverzeichnis</a> <!--alles fürs Abbildungsverzeichnis, Link-->
+            <section class="wrapper">
+                <ul>
+                    <li><a href="#" >Impressum</a></li> <!--alles fürs Impressum, Link-->
+                    <li><a href="#" >Verzeichnis</a></li> <!--alles fürs Abbildungsverzeichnis, Link-->
+                </ul>
+            </section>
         </footer>
     </body>
 </html>
