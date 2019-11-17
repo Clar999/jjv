@@ -57,7 +57,7 @@ header {
     font-size: 20pt;
     font-weight:200;
     padding: 0;
-    margin: 0;
+    margin-top: 50px;
 }
 
 #contentbereich p {
@@ -72,7 +72,6 @@ header {
     font-weight: 400;
     color: #333333;
 }
-
 
 footer {
     position: relative;
