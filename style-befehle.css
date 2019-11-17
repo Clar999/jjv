@@ -84,6 +84,12 @@ header {
     color: #333333;
 }
 
+#graphic {
+    width: 900px;
+}
+.screenshot{
+    height: 200px;
+}
 
 footer {
     position: relative;
