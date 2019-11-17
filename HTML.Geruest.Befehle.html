@@ -23,14 +23,14 @@
             <section class="textfeld">
                 <h2>git config</h2>
                 <p>
-                    Mit dem git config Befehl werden Werte für die Konfiguration gesetzt, in dem im .gitconfig Ordner die Konfigurations-Textdateien angepasst werden.
+                    Mit dem Befehl <b>git config</b> werden Werte für die Konfiguration gesetzt, in dem im .gitconfig Ordner die Konfigurations-Textdateien angepasst werden.
                     Die Konfigurationsnamen sind bestehen aus der "section" und dem "key" und sind durch einen Punkt voneinandergetrennt: </br>
                     user.email</br>
                     user.name</br>
                     Zusätzlich können noch Argumente mitgegeben werden.</br>
-                    --local (die Werte werden in einer Datei im Repository abgelegt)</br>
-                    --global (die Werte beziehen sich auf den Benutzer des Betriebssystems)</br>
-                    --system (die Werte werden auf den kompletten Rechner angewendet > alle Benutzer des Betriebssystems und alle Repositories)</br>
+                    <b>--local</b> (die Werte werden in einer Datei im Repository abgelegt)</br>
+                    <b>--global</b> (die Werte beziehen sich auf den Benutzer des Betriebssystems)</br>
+                    <b>--system</b> (die Werte werden auf den kompletten Rechner angewendet > alle Benutzer des Betriebssystems und alle Repositories)</br>
                     Priotität: local > global > system (git sucht erst lokal nach config-Werten und erst zum Schluss auf System-Ebene) </br>
                     Auf dem Bild ist eine config-Datei zu sehen, die in einem Benutzer-Ordner liegt und deren Parameter zeigt.
                 </p>
@@ -39,7 +39,7 @@
             <section class="textfeld">
                 <h2>git init</h2>
                 <p>
-                    Mit git init wird ein neues Repository erstellt. Der Befehl kann dazu verwendet werden, ein existierendes Projekt in ein Repository zu wandeln, oder ein neues, 
+                    Mit dem Befehl <b>git init</b> wird ein neues Repository erstellt. Der Befehl kann dazu verwendet werden, ein existierendes Projekt in ein Repository zu wandeln, oder ein neues, 
                     leeres Repository anzulegen. Da die meisten anderen Git-Befehle nicht zugänglich sind, solange das Repository nicht initialisiert wurde, ist es meist der erste Command.
                     Im Hintergrund wird ein .git-Ordner erstellt, dass alle nötigen Metadaten enthält und eine HEAD-Datei wird angelegt, die auf den aktuellen Commit hinweist.  </br>
                     Auf dem Bild ist ein .git-Ordner abgebildet, der nach dem git init-Befehl erstellt wird.
